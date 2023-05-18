@@ -1,0 +1,15 @@
+{
+    "trans_id": "COMPANY_name",
+    "trans_amount": 12000,
+    "wallet_balance": 24000,
+    "you_give": "Orange Money RCI",
+    "you_receive": "Orange Money Senegal",
+    "exchange_amount": 2000,
+    "jamb_to_receive": 10000,
+    "code_otp": "348798",
+    "wallet_id": 1,
+    "wallet_new_balance": 12000,
+    "status": false
+}
+
+python manage.py makemigrations api_v1 && python manage.py migrate api_v1 && python manage.py runserver

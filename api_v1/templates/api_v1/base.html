@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+    <script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=QgPilvXf0_LIeN5yC_ZToC9fDrkVtVZ5q375WE8YUl98Al3tW5z_HDiYpaHHbH-Ah-ab7U1ysxftg5qtMksEfNfYF440oVtXnJT2NJ1tvJp6WMu6ALw2k_784-KphBNg" charset="UTF-8"></script>
+    <title>{% block title %} My website {% endblock  %}</title>
+</head>
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <header class="py-1 mb-2">
+            <nav style="background-color:#e3f2fd;" class="navbar shadow-sm rounded" aria-label="Light offcanvas navbar" style="background-color:#e3f2fd;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Django Rest API Framework</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Menus</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Page principale</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Connexion
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Seconnecter</a></li>
+                                        <li><a class="dropdown-item" href="#">Inscription</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        {% endblock %}
+    </div>
+
+
+    <div id="sidebar">
+        {% block content %}{% endblock %}
+    </div>
+
+
+    <footer class="blog-footer">
+        <p>gandyam_pay</p>
+        <p>
+          <a href="#">Haut de la page</a>
+        </p>
+    </footer>
+
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
